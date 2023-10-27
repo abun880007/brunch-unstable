@@ -132,10 +132,10 @@ jobs:
         with:
           name: brunch-build
       - name: Identify custom version
-        if: ${{ (github.repository != 'sebanc/brunch') && (github.repository != 'sebanc/brunch-unstable') }}
+        if: ${{ (github.repository != 'sebanc/brunch') && (github.repository != 'abun880007/brunch-unstable') }}
         run: echo "RELEASE_VERSION_TYPE=custom" >> $GITHUB_ENV
       - name: Identify unstable version
-        if: ${{ (github.repository == 'sebanc/brunch-unstable') }}
+        if: ${{ (github.repository == 'abun880007/brunch-unstable') }}
         run: echo "RELEASE_VERSION_TYPE=unstable" >> $GITHUB_ENV
       - name: Identify stable version
         if: ${{ (github.repository == 'sebanc/brunch') }}
